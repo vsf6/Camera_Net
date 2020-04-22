@@ -11,6 +11,16 @@
         Loaded="MainWindow_OnLoaded"
         mc:Ignorable="d" Closed="Window_Closed">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
         <public:CameraControlWpf Name="cameraControl" />
+        <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal">
+            <Button Content="Start" Margin="5" Click="StartButton_Click" />
+            <Button Content="Stop" Margin="5" Click="StopButton_Click" />
+            <Button Content="Snapshot" Margin="5" Click="SnapshotButton_Click" />
+            <ComboBox Name="ResolutionsComboBox" Margin="5" />
+        </StackPanel>
     </Grid>
 </Window>
